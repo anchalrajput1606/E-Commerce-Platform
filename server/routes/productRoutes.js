@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+const { adminOnly } = require("../middleware/adminMiddleware");
+
 const {
   addProduct,
   getProducts,

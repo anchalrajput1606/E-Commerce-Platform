@@ -43,21 +43,15 @@ function Cart() {
   };
   const checkout = async () => {
         try {
-
             await API.post("/orders");
 
-            await API.post("/payment", {
-            amount: 1000,
-            });
-
-            alert("Payment Successful");
+            alert("🎉 Order & Payment Successful");
 
             fetchCart();
 
         } catch (error) {
-
             console.log(error);
-
+            alert(error.response?.data?.message || "Checkout Failed");
         }
     };
 

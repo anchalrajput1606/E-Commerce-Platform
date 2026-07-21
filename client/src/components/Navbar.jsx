@@ -25,7 +25,7 @@ function Navbar() {
         <Link to="/home" style={{ color: "white" }}>Home</Link>
         <Link to="/cart" style={{ color: "white" }}>Cart</Link>
         <Link to="/orders" style={{ color: "white" }}>Orders</Link>
-        <Link to="/admin" style={{ color: "white" }}>Admin</Link>
+        
 
         <button onClick={logout}>Logout</button>
       </div>

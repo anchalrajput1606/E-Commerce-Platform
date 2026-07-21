@@ -2,6 +2,7 @@ const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
 const express = require("express");
 const mongoose = require("mongoose");
+const cartRoutes = require("./routes/cartRoutes");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
 
 mongoose
   .connect(process.env.MONGO_URI)
